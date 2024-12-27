@@ -15,7 +15,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class StudentInsertServlet extends HttpServlet{
 	
 	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// request는 자바 파일과 jsp파일이 공유하는 객체
 		List<Student> sList = new ArrayList<Student>();
 		sList.add(new Student("일용자",99,88));

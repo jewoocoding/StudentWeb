@@ -13,7 +13,7 @@
 </head>
 <body>
 	<h1>학생 정보 등록</h1>
-	<form action="/student/register" method = "get">
+	<form action="/student/register" method = "post">
 	<ul>
 	<li>학생 이름 : <input type = "text" name = "name"></li>
 	<li>1차 점수 : <input type = "text" name = "firstScore"></li>

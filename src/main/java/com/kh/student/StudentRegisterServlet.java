@@ -19,8 +19,12 @@ import jakarta.servlet.http.HttpServletResponse;
 // http://localhost:8892/student/register?name=삼용자&firstScore=77&secondScore=66
 @WebServlet("/student/register")
 public class StudentRegisterServlet extends HttpServlet{
+	
+	// 학생 정보 등록의 경우 post방식으로 요청해야함.
+	// post방식 요청은 form태그를 통해서 밖에 되지 않으므로
+	// form 작성 필요
 	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		List<Student> sList = new ArrayList<Student>();
 		PrintWriter out = response.getWriter();
